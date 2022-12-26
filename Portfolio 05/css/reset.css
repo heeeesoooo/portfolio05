@@ -1,0 +1,43 @@
+/* 웹font 가져오기 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* 아이콘 가져오기 */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+address,
+em,
+i {
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    /* 폰트사이즈의 1배만큼 line-height를 준다 */
+    line-height: 1;
+    /* 자간 */
+    letter-spacing: -0.025em;
+
+    color: #444444;
+}
