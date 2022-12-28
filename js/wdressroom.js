@@ -13,21 +13,36 @@ $(function () {
     })
 
     $('.mainSlide').slick({
-        arrows: false
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
     })
 
-    $('.mainProduct .inner .tab>.pro_sd').slick({
+    $('.pro_sd').slick({
         slidesToShow: 3,
-        infinite: true,
-        fade: true,
-        cssEase: 'linear',
-        arrows: true,
+        arrows: false,
+        // infinite: true,
+        // fade: true,
+        // cssEase: 'linear',
+        // arrows: true,
     });
 
-    $('.mainProduct .pro_gnb li').on('click', function (e) {
-        e.preventDefault();
+    $('.mainProduct .pro_gnb li').on('click', function () {
+        var idx = $(this).index();
+        $('.mainProduct .tab>.pro_sd').removeClass('on');
+        $('.mainProduct .tab>.pro_sd').eq(idx).addClass('on');
+
+        $('.mainProduct .pro_gnb>li').removeClass('on');
+        $(this).addClass('on');
+    })
+
+    $('.mainProduct .tab>.pro_sd').eq(0).slick('slickPlay');
+    $('.mainProduct .pro_gnb li').on('click', function () {
         var idx = $(this).index();
         $(this).addClass('on').siblings().removeClass('on');
-        $('.mainProduct .inner .tab>.pro_sd').eq(idx).addClass('on').siblings().removeClass('on');
+        $('.mainProduct .tab>.pro_sd').eq(idx).addClass('on').siblings().removeClass('on');
+        $('.mainProduct .tab>.pro_sd').slick('slickPause');
+        $('.mainProduct .tab>.pro_sd').eq(idx).slick('slickPlay');
     })
 })
