@@ -28,6 +28,14 @@ $(function () {
         // arrows: true,
     });
 
+    $('.mainProduct .arrows .prev').on('click', function () {
+        $('.pro_sd').slick('slickPrev')
+    })
+
+    $('.mainProduct .arrows .next').on('click', function () {
+        $('.pro_sd').slick('slickNext')
+    })
+
     $('.mainProduct .pro_gnb li').on('click', function () {
         var idx = $(this).index();
         $('.mainProduct .tab>.pro_sd').removeClass('on');
@@ -45,4 +53,22 @@ $(function () {
         $('.mainProduct .tab>.pro_sd').slick('slickPause');
         $('.mainProduct .tab>.pro_sd').eq(idx).slick('slickPlay');
     })
+
+
+    $('.maintextsd').slick({
+        autoplay: true,
+        autoplaySpeed: 0,
+        variableWidth: true,
+        cssEase: 'linear',
+        speed: 10000,
+        centerMode: true,
+        //useCSS: false,
+        easing: 'linear',
+        arrows: false,
+    })
+
+
+    AOS.init();
+
+
 })

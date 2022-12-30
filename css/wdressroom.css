@@ -115,9 +115,7 @@
 /* ----------main---------- */
 
 /* ----------mainVisual---------- */
-.mainSlide {
-    margin: 0 0 100px 0;
-}
+.mainSlide {}
 
 .mainSlide img {
     width: 100%;
@@ -196,8 +194,7 @@
 
 /* ----------mainProduct---------- */
 .mainProduct {
-    position: relative;
-    margin: 0 0 100px 0;
+    padding: 100px 0;
 }
 
 .mainProduct .main_text {
@@ -225,6 +222,7 @@
 }
 
 .mainProduct .inner {
+    position: relative;
     width: 1200px;
     margin: 0 auto;
 }
@@ -305,34 +303,357 @@
     color: #000;
 }
 
+.pro_sd figure .img_box {
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: 0.5s 0.5s;
+}
+
+.pro_sd.on figure .img_box {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 0.5s 0.5s;
+}
+
+.pro_sd figure p {
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: 0.5s 0.8s;
+}
+
+.pro_sd.on figure p {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 0.5s 0.8s;
+}
+
+.pro_sd figure span {
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: 0.5s 1s;
+}
+
+.pro_sd.on figure span {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 0.5s 1s;
+}
+
+.pro_sd figure strong {
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: 0.5s 1s;
+}
+
+.pro_sd.on figure strong {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 0.5s 1s;
+}
+
 .mainProduct .arrows a {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 37px;
-    height: 75px;
+    width: 32px;
+    height: 32px;
 
     font-size: 0;
 }
 
 .mainProduct .arrows .prev {
-    background: url(../images/prev.png);
-    margin: 0 0 0 -700px;
+    margin: 0 0 0 -600px;
 }
 
 .mainProduct .arrows .next {
-    background: url(../images/next.png);
-    margin: 0 0 0 700px;
+    margin: 0 0 0 600px;
 }
 
+/* ----------mainBanner---------- */
+
+.mainBanner {
+    position: relative;
+    background: url(../img/mainbanner.jpg)no-repeat fixed center center/cover;
+    height: 500px;
+}
+
+.mainBanner .inner {
+    position: absolute;
+    padding: 100px 0;
+    color: #fff;
+    width: 1200px;
+    text-align: left;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.mainBanner h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    text-shadow: 0 3px 4px #000;
+}
+
+.mainBanner p {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+    text-shadow: 0 2px 3px #000;
+}
+
+.mainBanner i {
+    background: #333;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.mainBanner span {
+    vertical-align: 2px;
+    font-size: 20px;
+    text-shadow: 0 2px 3px #000;
+
+    margin: 0 10px 0 0;
+}
+
+/* ----------maintextsd---------- */
+.maintextsd {
+    margin: 0 0 10px 0;
+}
+
+.maintextsd span {
+    padding: 20px 0;
+    font-size: 100px;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000, -1px -1px #000, -1px 1px #000, 1px -1px #000;
+}
+
+.maintextsd strong {
+    padding: 20px 0;
+    font-size: 100px;
+    font-weight: 900;
+    color: #333;
+}
+
+/* ----------mainVideo---------- */
+.mainVideo {
+    background: rgb(245, 245, 245);
+}
+
+.mainVideo .inner {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.mainVideo .video_area {
+    width: 50%;
+}
+
+.mainVideo .video_area iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    vertical-align: middle;
+}
+
+.mainVideo .title {
+    margin: auto;
+    text-align: center;
+}
+
+.mainVideo .title span {
+    display: block;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.mainVideo .title h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 700;
+}
+
+.mainVideo .title h2::after {
+    content: "";
+    margin: 30px auto;
+    display: block;
+    background: #444;
+    width: 30px;
+    height: 1px;
+}
+
+.mainVideo .title p {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+/* ----------mainReview---------- */
+.mainReview {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.mainReview h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 50px;
+    letter-spacing: 10px;
+    margin: 0 0 30px 0;
+}
+
+.mainReview .inner {
+    display: flex;
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.mainReview figure {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+}
+
+.mainReview .textbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.inner figure:hover .textbox {
+    opacity: 1;
+}
+
+.mainReview p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    line-height: 25px;
+    width: 80%;
+}
+
+.mainReview a {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 7px 5px;
+}
+
+.mainReview a:hover {
+    background: #fff;
+    color: #444;
+}
+
+.mainReview .inner figure img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
 
 /* ----------footer---------- */
 
 .footer {
-    height: 50vh;
     background: #444;
+    color: #fff;
 }
+
+.footer .inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .top {
+    line-height: 80px;
+    border-bottom: 1px solid rgba(225, 225, 225, 0.5);
+}
+
+.footer .top .inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .top .inner img {
+    width: 100px;
+}
+
+.footer .top ul li {
+    display: inline-block;
+}
+
+.footer .top ul li~li::before {
+    content: "";
+    margin: 0 20px;
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background: #fff;
+}
+
+.footer .bottom {
+    padding: 30px 0;
+}
+
+.footer .bottom .con {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer h2 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.footer .info {
+    display: flex;
+    gap: 20px;
+}
+
+.footer .bottom {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.footer .bottom .inner {
+    text-align: left;
+}
+
+.footer span {
+    display: inline-block;
+    margin: 0 0 0 10px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    padding: 2px 5px;
+}
+
+.footer strong {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    margin: 0 0 10px 0;
+}
+
+
 
 /* * {
     outline: 1px solid tomato;
